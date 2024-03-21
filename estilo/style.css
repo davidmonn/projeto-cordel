@@ -1,0 +1,161 @@
+@charset 'UTF-8';
+
+/*
+Tipos de format()
+
+opentype (otf)
+truetype (ttf)
+embedded-opentype ()
+truetype-aat (Apple Advanced Typography)
+svg
+*/
+
+@font-face {
+    font-family: 'sri';
+    src: url(../fonts/Sriracha-Regular.ttf) format(truetype);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'vanessa';
+    src: url(../fonts/vanessa.ttf) format(truetype);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'passion';
+    src: url(../fonts/PassionOne-Regular.ttf) format(truetype);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'mig';
+    src: url('../fonts/Miganty\ Script.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'louisa';
+    src: url('../fonts/LouisaCP.otf') format('opentype');
+}
+
+:root {
+    --fontp: Verdana, Geneva, Tahoma, sans-serif;
+    --font01: 'sri', sans-serif;
+    --font02: 'vanessa', sans-serif;
+    --font03: 'passion', sans-serif;
+    --font04: 'mig', sans-serif;
+    --font05: 'louisa';
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+html, body {
+    min-height: 100vh;
+    background-color: aqua;
+    font-family: var(--fontp);
+}
+
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+header span {
+    font-family: var(--font05);
+    font-size: 2em;
+}
+
+header > h1 {
+    padding-top: 50px;
+    font-variant: small-caps;
+    font-family: var(--font02);
+    font-size: 5vw;
+}
+
+header > p {
+    padding-bottom: 50px;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+header a:hover {
+    text-decoration: underline;
+    font-weight: bolder;
+    color: aqua;
+    transition-duration: 1s;
+}
+
+section {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    line-height: 2em;
+    padding-left: 30px;
+    font-family: var(--font04);
+    font-weight: normal;
+    font-size: 3.5vw;
+}
+
+section p {
+    padding-bottom: 2em;
+}
+
+section.normal {
+    background-color: white;
+    color: black;
+}
+
+section.imagem {
+    background-color: rgba(0, 0, 0, 0.388);
+    color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.306);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+section.imagem p {
+    display: inline-block;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.482);
+    text-shadow: 5px 4px 2px black;
+}
+
+section#img01 {
+    background-image: url(../Imagens/background001.jpg);
+    background-position: right center;
+}
+
+section#img02 {
+    background-image: url(../Imagens/background002.jpg);
+    background-position: right bottom;
+}
+
+footer {
+    background-color: black;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+footer a:hover {
+    color: red;
+    text-decoration: underline;
+    transition-duration: 1s;
+}
